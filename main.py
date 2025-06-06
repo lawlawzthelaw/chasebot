@@ -35,4 +35,4 @@ async def on_member_update(before, after):
                 await canal.send(embed=embed)
 
 keep_alive()
-bot.run(os.getenv("DISCORD_TOKEN"))
+bot.run(os.environ['DISCORD_TOKEN'])
