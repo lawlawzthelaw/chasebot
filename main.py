@@ -35,4 +35,8 @@ async def on_member_update(before, after):
                 await canal.send(embed=embed)
 
 keep_alive()
-bot.run(os.environ['DISCORD_TOKEN'])
+try:
+    bot.run(os.environ['DISCORD_TOKEN'])
+except Exception as e:
+    print(f'❌ Error al iniciar el bot: {e}')
+
